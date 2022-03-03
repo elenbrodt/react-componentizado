@@ -19,20 +19,20 @@ WrapperTabList.tabsRole = 'TabList';
 
 export const WrapperTab = styled(Tab)`
   border-radius: 16px;
-  border: 1px solid #ccc;
   padding: 16px;
   user-select: none;
   cursor: pointer;
   z-index: 99999;
   background-color: "#fff";
-  margin: 8px;
-
-  &:focus{
-    outline:none;
-  }
+  margin-right:16px;
 
   &.is-selected{
-    box-shadow: 3px 2px 10px rgba(0,0,0,0.2);
+    box-shadow: -5px -5px 10px rgba(0,0,0,0.2);
+    background-color: #88abc2;
+    color: white;
+    font-weight: bold;
+    border-bottom-left-radius:0px;
+    border-bottom-right-radius:0px;
   }
 `;
 
@@ -40,12 +40,16 @@ WrapperTab.tabsRole = 'Tab';
 
 export const WrapperTabPanel = styled(TabPanel)`
   display:none;
-  padding: 16px;
-  border: 1px solid '#ccc';
+  
   margin-top: -5px;  
+  justify-content: space-between;
 
   &.is-selected{
     display:block;
+    background-color: #88abc2;
+    border-radius: 10px;
+    box-shadow: -5px -5px 10px rgba(0,0,0,0.2);
+    
   }
   `;
 
@@ -55,6 +59,6 @@ export const WrapperList = styled.div`
   display:flex;
   justify-content: flex-start;
   flex-wrap: wrap;
-  
+  padding: 16px;
 `;
 

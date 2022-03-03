@@ -17,7 +17,6 @@ const App = () => {
           <Repositories/>
         </>)}
       </> ): (<NoSearch/>)}
-    
     </Layout>
   );
 }

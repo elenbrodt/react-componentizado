@@ -39,7 +39,9 @@ const GithubProvider = ({children}) => {
       loading:!prevState.loading,
     }));
 
-    api.get(`users/${username}`).then( ({ data }) =>
+    api
+      .get(`users/${username}`)
+      .then( ({ data } ) =>
       {
         setGithubState((prevState) => ({
           ...prevState,

@@ -1,6 +1,7 @@
 import React from 'react';
 import * as S from './styled'
 import useGithub from '../../hooks/github-hooks';
+import StatusCount from '../statusCount';
 
 const Profile = () => {
 
@@ -15,7 +16,6 @@ const Profile = () => {
     />
 
     <S.WrapperInfoUser>
-
       <div>
         <h1>{githubState.user.name}</h1>
         <S.WrapperUserGeneric>
@@ -34,30 +34,9 @@ const Profile = () => {
           <h3>Blog: </h3>
           <a href={githubState.user.blog} target="_blank" rel="noreferrer">{githubState.user.blog}</a>
         </S.WrapperUserGeneric>
-
       </div>
-      
-      <S.WrapperStatusCount>
-        <div>
-          <h4>Followers</h4>
-          <span>{githubState.user.followers}</span>
-        </div>
-        <div>
-          <h4>Followings</h4>
-          <span>{githubState.user.following}</span>
-        </div>
-        <div>
-          <h4>Gists</h4>
-          <span>{githubState.user.public_gists}</span>
-        </div>
-        <div>
-          <h4>Repos</h4>
-          <span>{githubState.user.public_repos}</span>
-        </div>
-      </S.WrapperStatusCount>
-
+      <StatusCount/>
     </S.WrapperInfoUser>
-
   </S.Wrapper>
   )
 }
